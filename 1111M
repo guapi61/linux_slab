@@ -1,0 +1,6 @@
+all: main.c
+	arm-buildroot-linux-gnueabihf-gcc -o mqtt_test main.c ./cJSON/cJSON.c  -I include/test/ -I include/common/ -I include/mqttclient  -I include/ -I include/common/log -I include/mqtt  -I ./include/platform/linux  -I ./include/network -L ./mqtt/ -lmqttclient -lpthread -lm 
+
+clean:
+	rm mqtt_test
+
